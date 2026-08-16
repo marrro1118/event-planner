@@ -25,6 +25,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: ls -la node_modules/.bin/ | grep -i tsc; cat node_modules/.bin/tsc | head -3; node -e "console.log(process.version)"
       - run: pnpm build
       - uses: actions/upload-pages-artifact@v3
         with:
