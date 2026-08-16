@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ローカルのWindows script-shell対策 (CIのLinux環境に持ち込むとpnpmが壊れる)
+.npmrc
